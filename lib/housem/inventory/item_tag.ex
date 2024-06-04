@@ -1,7 +1,12 @@
 defmodule Housem.Inventory.ItemTag do
   use Ash.Resource,
     domain: Housem.Inventory,
-    data_layer: Ash.DataLayer.Ets
+    data_layer: AshPostgres.DataLayer
+
+  postgres do
+    table "items_tags"
+    repo Housem.Repo
+  end
 
   attributes do
     integer_primary_key :id

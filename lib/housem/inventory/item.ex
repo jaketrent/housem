@@ -1,7 +1,12 @@
 defmodule Housem.Inventory.Item do
   use Ash.Resource,
     domain: Housem.Inventory,
-    data_layer: Ash.DataLayer.Ets
+    data_layer: AshPostgres.DataLayer
+
+  postgres do
+    table "items"
+    repo Housem.Repo
+  end
 
   attributes do
     uuid_primary_key :id

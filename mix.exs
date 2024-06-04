@@ -59,6 +59,7 @@ defmodule Housem.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.2"},
       {:ash, "~> 3.0"},
+      {:ash_postgres, "~> 2.0.0"},
       {:picosat_elixir, "~> 0.2"}
     ]
   end

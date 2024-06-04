@@ -1,5 +1,8 @@
 defmodule Housem.Repo do
-  use Ecto.Repo,
-    otp_app: :housem,
-    adapter: Ecto.Adapters.Postgres
+  use AshPostgres.Repo,
+    otp_app: :housem
+
+  def installed_extensions do
+    ["ash-functions"]
+  end
 end

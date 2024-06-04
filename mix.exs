@@ -60,6 +60,7 @@ defmodule Housem.MixProject do
       {:bandit, "~> 1.2"},
       {:ash, "~> 3.0"},
       {:ash_postgres, "~> 2.0.0"},
+      {:ash_json_api, "~> 1.0"},
       {:picosat_elixir, "~> 0.2"}
     ]
   end

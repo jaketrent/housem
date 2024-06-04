@@ -1,7 +1,20 @@
 defmodule Housem.Inventory.Item do
   use Ash.Resource,
     domain: Housem.Inventory,
-    data_layer: AshPostgres.DataLayer
+    data_layer: AshPostgres.DataLayer,
+    extensions: [AshJsonApi.Resource]
+
+  json_api do
+    type "item"
+
+    routes do
+      base("/items")
+
+      get(:read)
+      index :read
+      post(:create)
+    end
+  end
 
   postgres do
     table "items"

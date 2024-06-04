@@ -1,5 +1,5 @@
 defmodule Housem.Inventory do
-  use Ash.Domain
+  use Ash.Domain, extensions: [AshJsonApi.Domain]
 
   resources do
     resource Housem.Inventory.Item
